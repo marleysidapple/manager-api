@@ -76,6 +76,11 @@ $api->version('v1', function ($api) {
 	 	*/
 	 	$api->post('post/update/{id}', 'PostController@updatePost');
 
+	 	/**
+	 	* list employee
+	 	*
+	 	*/
+
 
 	 }); //end of group
 });

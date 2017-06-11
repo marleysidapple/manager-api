@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Api\V1;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\SignupRequest;
+use App\Http\Requests\LoginRequest;
 use App\User;
 use DB;
 use Illuminate\Http\Request;
@@ -33,7 +34,7 @@ class SignupController extends Controller
         return response()->json(['success' => 'user registered successfully'], 200);
     }
 
-    public function authenticate(Request $request)
+    public function authenticate(LoginRequest $request)
     {
         // grab credentials from the request
         $credentials = $request->only('email', 'password');
