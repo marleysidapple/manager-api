@@ -13,7 +13,7 @@ class EmployeeRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,7 +24,9 @@ class EmployeeRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'name'  => 'required',
+            'phone' => 'required',
+            'shift' => 'required',
         ];
     }
 }
