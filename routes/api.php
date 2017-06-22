@@ -80,7 +80,7 @@ $api->version('v1', function ($api) {
 	 	* list employee
 	 	*
 	 	*/
-	 	$api->get('employee/list', 'EmployeeController@listEmployee');
+	 	$api->get('employee/list/{id?}', 'EmployeeController@listEmployee');
 
 
 	 	/**
@@ -88,6 +88,12 @@ $api->version('v1', function ($api) {
 	 	*
 	 	*/
 	 	$api->post('employee/add', 'EmployeeController@addEmployee');
+
+	 	/**
+	 	* update employee
+	 	*
+	 	*/
+	 	$api->post('employee/update/{id}', 'EmployeeController@updateEmployee');
 
 
 	 }); //end of group
